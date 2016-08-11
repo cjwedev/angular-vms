@@ -1,0 +1,58 @@
+<div ng-include src="'app/session/message_bar.html'"></div>
+
+<div class="well">
+  <img src="assets/images/MascotWifi.png" class="session-wifi">
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Welcome User!</h1>
+      <h4>Create your account below to get started.</h4>
+    </div>
+  </div>
+
+
+  <div class="session-form mt40">
+    <!-- Start registration form -->
+    <form role="form" class="" ng-submit="vm.register();">
+      <fieldset>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <input type="text" class="form-control" placeholder="Username" ng-required="true" ng-model="vm.user.username" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <input type="email" class="form-control" placeholder="Email" ng-model="vm.user.email" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input type="password" class="form-control" placeholder="Password" ng-required="true" ng-model="vm.user.password" />
+          </div>
+          <div class="col-sm-6 form-group">
+            <input type="password" class="form-control" placeholder="Confirm Password" ng-required="true" ng-model="vm.user.confirm_password" ng-keyup="vm.checkPassword();" ng-class="{invalid: !vm.correctPassword}" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-actions text-right">
+              <button type="submit" class="btn btn-success btn-lg btn-block">Continue</button>
+              <p class="terms">
+                By clicking continue you agree our <a ng-click="vm.showModal();">Terms of Service & Privacy Policy</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <!-- End registration form -->
+
+    <div class="signup-login">
+      <p class="Body-Copy">Already on the Grid?<a ui-sref="auth.signin" class="ml15">Sign In</a></p>
+    </div>
+  </div>
+</div>

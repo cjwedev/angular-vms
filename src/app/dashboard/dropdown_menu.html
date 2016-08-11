@@ -1,0 +1,22 @@
+<!-- Start of top dropdown menu -->
+<div class="col-md-12 banner-menu" ng-controller="DropdownMenuController as dropdown">
+  <a ui-sref="dashboard"><img src="assets/images/logo-vert.svg" class="logo" /></a>
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+      <img src="assets/images/default-profile-icon.svg" class="dropdown-photo" ng-if="vm.me.profile == null || vm.me.profile.picture == null" />
+      <img ng-src="{{vm.me.profile.picture}}" class="dropdown-photo" ng-if="vm.me.profile != null && vm.me.profile.picture != null" />
+      <span class="banner-name" ng-if="vm.me.profile != null">
+        {{dropdown.me.profile.firstname}}&nbsp;{{dropdown.me.profile.firstname}}
+      </span>
+      <span class="banner-name" ng-if="vm.me.profile == null">
+        No Name
+      </span>
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a ui-sref="account.profile">Profile</a></li>
+      <li><a ng-click="dropdown.logout();">Log Out</a></li>
+    </ul>
+  </div>
+</div>
+<!-- End of top dropdown menu -->

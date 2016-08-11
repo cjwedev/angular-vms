@@ -1,0 +1,405 @@
+/**
+* Media queries
+*/
+/**
+* Set a rem font size with pixel fallback
+*/
+/**
+* SVG background images with PNG and retina fallback
+*/
+/**
+* Animations and keyframes
+*/
+/**
+* Transitions
+*/
+/**
+* Cross browser opacity
+*/
+/**
+* Visually hide an element
+*/
+/**
+* Clearfix
+*/
+/**
+* Border radius
+*/
+/**
+* Positioning absolutely
+*/
+/**
+* Media queries
+*/
+/**
+* Set a rem font size with pixel fallback
+*/
+/**
+* SVG background images with PNG and retina fallback
+*/
+/**
+* Animations and keyframes
+*/
+/**
+* Transitions
+*/
+/**
+* Cross browser opacity
+*/
+/**
+* Visually hide an element
+*/
+/**
+* Clearfix
+*/
+/**
+* Border radius
+*/
+/**
+* Positioning absolutely
+*/
+@font-face {
+  font-family: 'Muli-ExtraLight';
+  font-style: normal;
+  src: url("../fonts/Muli-ExtraLight.ttf"); }
+
+@font-face {
+  font-family: 'Muli-ExtraLightItalic';
+  font-style: normal;
+  src: url("../fonts/Muli-ExtraLightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Bold';
+  font-style: normal;
+  src: url("../fonts/Muli-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Muli-BoldItalic';
+  font-style: normal;
+  src: url("../fonts/Muli-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Light';
+  font-style: normal;
+  src: url("../fonts/Muli-Light.ttf"); }
+
+@font-face {
+  font-family: 'Muli-LightItalic';
+  font-style: normal;
+  src: url("../fonts/Muli-LightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-SemiBold';
+  font-style: normal;
+  src: url("../fonts/Muli-SemiBold.ttf"); }
+
+@font-face {
+  font-family: 'Muli-SemiBoldItalic';
+  font-style: normal;
+  src: url("../fonts/Muli-SemiBoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Normal';
+  font-style: normal;
+  src: url("../fonts/Muli.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Italic';
+  font-style: normal;
+  src: url("../fonts/Muli-Italic.ttf"); }
+
+.HeadlineLight {
+  font-size: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 0.8px;
+  font-family: "Muli-ExtraLight";
+  color: #ffffff; }
+
+.Headline {
+  font-size: 40px;
+  font-size: 2.5rem;
+  letter-spacing: 0.8px;
+  font-family: "Muli-ExtraLight";
+  color: #52647b; }
+
+.PriceText {
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-family: "Muli-Bold";
+  color: #52647b; }
+
+.Subtext {
+  font-size: 24px;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  font-family: "Muli-Light";
+  color: #52647b; }
+
+.SubtextLight {
+  font-size: 24px;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  font-family: "Muli-Light";
+  color: #ffffff; }
+
+.FormForcusTextAlt, .form-text-white, .dashboard-main .quick-launch .progress-section .progress-name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #ffffff; }
+
+.FormHintTextAlt {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #3c4858; }
+
+.Body-Copy-Light {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #ffffff; }
+
+.FormFocusText, .form-text {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #52647b; }
+
+.Body-Copy {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #52647b; }
+
+.FormHintText {
+  font-size: 18px;
+  font-size: 1.125rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-Light";
+  color: #d7e1ea; }
+
+.TestimonialTextDark {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+  font-family: "Muli-LightItalic";
+  color: #52647b; }
+
+.TestimonialTextLight {
+  font-family: "Muli-LightItalic";
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+  color: #ffffff; }
+
+.MiniHeadingText, .dashboard-main .block-tag {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  font-family: "Muli-Bold";
+  color: #52647b; }
+
+.SimpleLinkHover {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #d8e1e9; }
+
+.Text-Style {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #52647b; }
+
+.Navigation-Text {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #52647b; }
+  @media (max-width: 767px) {
+    .Navigation-Text {
+      font-size: 12px;
+      font-size: 0.75rem; } }
+
+.Navigation-Text-Light {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #f6f6f6; }
+  @media (max-width: 767px) {
+    .Navigation-Text-Light {
+      font-size: 12px;
+      font-size: 0.75rem; } }
+
+.SimpleLinkLight, .dashboard-nav a {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #ffffff; }
+
+.ButtonTextLight {
+  font-size: 16px;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  font-family: "Muli-SemiBold";
+  color: #ffffff; }
+
+.NavigationTextLightHover {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Muli-SemiBold";
+  line-height: 2.8;
+  letter-spacing: 0.3px;
+  color: #52647b; }
+
+.MobileBodyTextLight {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Muli-Normal";
+  letter-spacing: 0.3px;
+  color: #f6f6f6; }
+
+.MobileNavText {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-family: "Muli-SemiBold";
+  letter-spacing: 0.2px;
+  color: #f6f6f6; }
+
+.BoilerPlateText {
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-family: "Muli-Normal";
+  letter-spacing: 0.2px;
+  color: #52647b; }
+
+.ActionText {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Muli-Normal";
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #dc3c41; }
+
+.dashboard-header {
+  padding-top: 55px;
+  padding-bottom: 150px;
+  background-color: #1340df;
+  background-image: url(../images/star-field-alpha.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover; }
+  @media (max-width: 767px) {
+    .dashboard-header {
+      padding-bottom: 75px; } }
+  .no-svg .dashboard-header {
+    background-image: url(../images/star-field-alpha.png); }
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      .no-svg .dashboard-header {
+        background-image: url(../images/star-field-alpha@2x.png); } }
+  .dashboard-header .logo {
+    margin-left: 75px; }
+
+.dashboard-nav {
+  background-color: #262f3c;
+  padding: 30px 0px; }
+  .dashboard-nav a.active img, .dashboard-nav a:hover img, .dashboard-nav a:active img, .dashboard-nav a:focus img {
+    mix-blend-mode: lighten; }
+  .dashboard-nav a img {
+    object-fit: contain;
+    mix-blend-mode: luminosity;
+    margin-right: 15px;
+    margin-top: -5px; }
+
+.dashboard-main {
+  padding: 100px 0px;
+  background-color: #1f2732;
+  position: relative; }
+  .dashboard-main .block-tag {
+    position: absolute;
+    top: 20px;
+    left: 40px; }
+  .dashboard-main .quick-launch {
+    border-radius: 3px;
+    background-color: #f5f8fb; }
+    .dashboard-main .quick-launch .glance {
+      text-align: center;
+      padding: 60px 40px;
+      height: 460px;
+      background-color: #1659ef;
+      position: relative; }
+    .dashboard-main .quick-launch .block-action {
+      position: absolute;
+      bottom: 60px;
+      transform: translatex(-50%); }
+    .dashboard-main .quick-launch .starting {
+      background: #ffffff;
+      text-align: center;
+      position: relative;
+      padding: 60px 40px;
+      height: 460px; }
+    .dashboard-main .quick-launch .progress-section {
+      margin-top: 80px; }
+      .dashboard-main .quick-launch .progress-section .progress-name {
+        text-align: left; }
+      .dashboard-main .quick-launch .progress-section .progress {
+        padding-left: 0;
+        padding-right: 0px;
+        height: 24px;
+        border-radius: 100px;
+        background-color: #1340df;
+        box-shadow: none; }
+      .dashboard-main .quick-launch .progress-section .progress-bar {
+        border-radius: 100px;
+        background-color: #36ca75; }
+
+.content-block {
+  border-radius: 3px;
+  background-color: #f5f8fb;
+  padding: 60px 40px 20px 40px;
+  margin-bottom: 20px;
+  min-height: 315px;
+  position: relative; }
+  .content-block .block-action {
+    position: absolute;
+    bottom: 20px;
+    transform: translatex(-50%); }
+  .content-block .left-section {
+    float: left;
+    width: 300px; }
+    .content-block .left-section ul.left-menu {
+      list-style-type: none;
+      padding-left: 20px; }
+      .content-block .left-section ul.left-menu li {
+        margin-bottom: 30px; }
+  .content-block .right-section {
+    float: left;
+    width: calc(100% - 300px);
+    margin-bottom: 100px; }
+    .content-block .right-section .title {
+      margin-top: 0px; }
+    .content-block .right-section .form-title {
+      margin-top: 100px;
+      margin-bottom: 30px; }
+      @media (max-width: 767px) {
+        .content-block .right-section .form-title {
+          margin-top: 50px; } }
+    .content-block .right-section .form-group {
+      margin-bottom: 30px; }
+    .content-block .right-section .action-cancel {
+      margin-left: 20px;
+      margin-bottom: 50px; }

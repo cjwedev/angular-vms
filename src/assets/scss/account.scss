@@ -1,0 +1,51 @@
+@import "mixins";
+@import "variables";
+@import "fonts";
+
+.myaccount-section {
+  .form-title {
+    margin-top: 60px !important;
+
+    @include tablet {
+      margin-top: 40px !important;
+    };
+  }
+}
+
+.subscription-form {
+  .form-group {
+    margin-bottom: 15px !important;
+  }
+
+  .checkbox-inline {
+    line-height: 1.5 !important;
+  }
+}
+
+.profile-photo {
+  cursor: pointer;
+  width: 76px;
+  height: 76px;
+}
+
+.invoice-table {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  };
+
+  th {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    border-bottom: 0 !important;
+  }
+
+  td {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+    border-top: 0 !important;
+  }
+}

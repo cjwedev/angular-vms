@@ -1,0 +1,24 @@
+<!-- Start of message handler -->
+<div class="container">
+  <div class="col-md-12">
+    <div id="message" class="alert alert-danger" ng-if="vm.message.error !== undefined">
+      <a class="close" ng-click="vm.closeAlert();">&times;</a>
+      <strong>Error!</strong>
+      <span class="content">{{ vm.message.error }}</span>
+    </div>
+
+    <div id="message" class="alert alert-success" ng-if="vm.message.success !== undefined">
+      <a class="close" ng-click="vm.closeAlert();">&times;</a>
+      <strong>Success!</strong>
+      <span class="content">{{ vm.message.success }}</span>
+    </div>
+
+    <div id="message" class="alert alert-info" ng-if="vm.message.info !== undefined">
+      <a class="close" ng-click="vm.closeAlert();">&times;</a>
+      <strong>Info!</strong>
+      <span class="content">{{ vm.message.info }}</span>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!-- End of message handler -->

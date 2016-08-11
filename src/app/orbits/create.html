@@ -1,0 +1,113 @@
+<div class="container-fluid dark-background">
+
+  <div class="row dashboard-header">
+
+    <div ng-include src="'app/dashboard/dropdown_menu.html'"></div>
+
+    <!-- Start of top menu -->
+    <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 text-center">
+      <h1 class="white-color">Greetings <span ng-if="vm.me.profile != null">{{vm.me.profile.firstname}}</span>,<br/>Welcome To The Grid.</h1>
+      <p class="form-text-white">
+        Before getting started, finish setting up your account by entering your billing information.
+      </p>
+    </div>
+    <!-- End of top menu -->
+  </div>
+
+  <div ng-include src="'app/dashboard/top.html'"></div>
+
+  <div class="row dashboard-main">
+
+    <div class="message-bar dashboard-message" ng-include src="'app/dashboard/message_bar.html'"></div>
+
+    <div class="container">
+      <div class="col-md-12">
+        <div class="content-block">
+
+          <div class="left-section" ng-include src="'app/orbits/left_menu.html'"></div>
+
+          <!-- Start of Billing form -->
+          <div class="right-section">
+            <h4 class="title">Create New Orbit</h4>
+            <p class="form-text">
+              Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl.
+            </p>
+            <h4 class="form-title">Orbit Details</h4>
+            <form class="form-horizontal" role="form" name="orbitForm" ng-submit="vm.createOrbit()">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Name Your Orbit" ng-required="true" ng-model="vm.orbit.vm_name" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <select class="form-control" ng-required="true" ng-model="vm.flavor" ng-options="flavor.vcpus + 'CPU ' + flavor.ram + 'GB' for flavor in vm.flavors">
+                      <option value="" disabled selected>Select Your Orbit Setup</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <select class="form-control" ng-model="vm.orbit.volume" ng-required="true" ng-options="hdd for hdd in vm.hddList">
+                      <option value="" disabled selected>Select Your HDD</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <textarea class="form-control" placeholder="Description" rows="5" ng-model="vm.orbit.description" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <select class="form-control" ng-model="vm.ssh_key" ng-options="key.keyname for key in vm.me.sshkeys track by key.keyvalue">
+                      <option value="" selected>Select SSH Key</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Admin Password" ng-model="vm.orbit.admin_pwd" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt30">
+                <div class="col-md-12">
+                  <h4>OS</h4>
+                  <div class="orbit-os" ng-repeat="image in vm.images">
+                    <div class="os-image" ng-class="{selected: image[2] == true}" ng-click="vm.selectImage(image)">
+                      <img src="assets/images/ubuntu-logo.svg" />
+                    </div>
+                    <p class="os-label">{{ image[0] }}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb50 mt30">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-lg btn-success" ng-disabled="vm.sentRequest">Create Orbit</button>
+                  <a class="action-cancel" ng-click="vm.cancelOrbit();">Cancel</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- End of Billing form -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include src="'app/main/footer.html'"></div>

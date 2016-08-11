@@ -1,0 +1,21 @@
+<div class="modal-header">
+  <h4 class="modal-title">Add Your SSH Key</h4>
+</div>
+<div class="modal-body">
+  <form ng-submit="sshEditCtrl.updateKey();">
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <input type="text" class="form-control" placeholder="SSH Key Name" ng-required="true" ng-model="sshEditCtrl.ssh.keyname" />
+      </div>
+      <div class="form-group col-sm-12">
+        <textarea class="form-control" placeholder="SSH Key" rows="10" ng-model="sshEditCtrl.ssh.keyvalue" />
+      </div>
+    </div>
+    <div class="row mb50">
+      <div class="col-sm-12">
+        <button type="submit" class="btn btn-lg btn-success">Update SSH Key</button>
+        <a class="action-cancel ml15" ng-click="sshEditCtrl.cancel();">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>

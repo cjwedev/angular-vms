@@ -1,0 +1,36 @@
+<div ng-include src="'app/session/message_bar.html'"></div>
+
+<div class="well">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Welcome Back</h1>
+      <h4>&nbsp;</h4>
+    </div>
+  </div>
+
+  <div class="row session-form mt60">
+    <div class="col-xs-6">
+      <form role="form" ng-submit="vm.login();">
+        <fieldset>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" ng-required="true" ng-model="vm.user.username" />
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" ng-required="true" ng-model="vm.user.password" />
+          </div>
+        </fieldset>
+        <div class="form-actions text-center">
+          <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
+        </div>
+      </form>
+
+      <p class="terms">
+        By clicking continue you agree our <a ng-click="vm.showModal();">Terms of Service & Privacy Policy</a>.
+      </p>
+    </div>
+    <div class="col-xs-6">
+      <h4 class="mt15">Forgot your password?</h4>
+      <div class="mt15"><a ui-sref="auth.reset-request">Reset Your Password</a><div>
+    </div>
+  </div>
+</div>

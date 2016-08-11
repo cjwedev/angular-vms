@@ -1,0 +1,125 @@
+<div class="container-fluid dark-background">
+
+  <div class="row dashboard-header">
+
+    <div ng-include src="'app/dashboard/dropdown_menu.html'"></div>
+
+    <!-- Start of top menu -->
+    <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 text-center">
+      <h1 class="white-color">Greetings <span ng-if="vm.me.profile != null">{{vm.me.profile.firstname}}</span>,<br/>Welcome To The Grid.</h1>
+      <p class="form-text-white">
+        Before getting started, finish setting up your account by entering your billing information.
+      </p>
+    </div>
+    <!-- End of top menu -->
+  </div>
+
+  <div ng-include src="'app/dashboard/top.html'"></div>
+
+  <div class="row dashboard-main">
+
+    <div class="message-bar dashboard-message" ng-include src="'app/dashboard/message_bar.html'"></div>
+
+    <div class="container">
+      <div class="col-md-12">
+        <div class="content-block">
+
+          <div class="left-section" ng-include src="'app/account/left_menu.html'"></div>
+
+          <!-- Start of Profile form -->
+          <div class="right-section">
+            <h4 class="title">Profile</h4>
+            <p class="form-text">
+              Update or customize your System On Grid Profile below.
+            </p>
+            <h4 class="form-title">Change Your Profile Photo</h4>
+            <form class="form-horizontal" role="form" name="myAccountForm" ng-submit="vm.saveProfile()">
+              <div class="row">
+                <div class="col-sm-12">
+                  <img src="assets/images/upload-profile-image.svg" class="profile-photo" ng-if="vm.profile.picture == null" />
+                  <img ng-src="{{vm.profile.picture}}" class="profile-photo" ng-if="vm.profile.picture != null" />
+                  <span class="FormFocusText" style="margin-left:30px;">{{vm.profile.firstname }}&nbsp;{{ vm.profile.lastname}}</span>
+                </div>
+                <input type="file" id="profile-image" fileread="vm.profilePicture" style="visibility: hidden">
+              </div>
+
+              <div class="row mt60">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="First Name" ng-model="vm.profile.firstname" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Last Name" ng-model="vm.profile.lastname" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Phone Number" ng-model="vm.profile.phonenumber" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Address" ng-required="true" ng-model="vm.profile.address" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="City" ng-required="true" ng-model="vm.profile.city" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="State" ng-required="true" ng-model="vm.profile.state" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="ZIP" ng-required="true" ng-model="vm.profile.zip" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Country" ng-required="true" ng-model="vm.profile.country" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb50">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-lg btn-success">Update</button>
+                  <a class="action-cancel" ng-click="vm.cancelProfile()">Cancel</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div ng-include src="'app/main/footer.html'"></div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('form').on('click', '.profile-photo', function(e) {
+      e.preventDefault();
+      $('#profile-image').click();
+    })
+  });
+</script>

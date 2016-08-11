@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h4 class="modal-title">Invoice Information</h4>
+</div>
+<div class="modal-body">
+  <div class="row mt30">
+    <div class="col-md-12">
+      <p>
+        <strong>Invoice No: </strong>{{ invoiceCtrl.invoice.invoice_number }}
+      </p>
+      <p>
+        <strong>Total Amount: </strong>{{ invoiceCtrl.invoice.amount | currency }}
+      </p>
+      <p>
+        <strong>Credits Used: </strong>{{ invoiceCtrl.invoice.credits_used | currency }}
+      </p>
+      <p>
+        <strong>Date: </strong>{{ invoiceCtrl.invoice.created_at | date: 'MMM d, yyyy' }}
+      </p>
+
+      <div class="table-responsive">
+        <table class="table mt30 table-striped">
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in invoiceCtrl.invoice.items">
+              <td>{{ item.amount | currency }}</td>
+              <td>{{ item.description }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+    <a class="modal-cancel" ng-click="invoiceCtrl.ok()">Close</a>
+</div>

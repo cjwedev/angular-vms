@@ -1,0 +1,87 @@
+<!doctype html>
+<html ng-app="stargaze">
+  <head>
+    <meta charset="utf-8">
+    <title>stargaze</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bower_components/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" />
+    <link href="bower_components/slick-carousel/slick/slick.css" rel="stylesheet" />
+    <link href="bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet" />
+    <link href="assets/css/session.css" rel="stylesheet" />
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+    <link href="assets/css/orbit.css" rel="stylesheet" />
+    <link href="assets/css/account.css" rel="stylesheet" />
+
+    <noscript>Your browser does not support JavaScript! Please check your browser settings.</noscript>
+    <!-- Stripe -->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.min.js"></script>
+    <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/parallax.js/parallax.min.js"></script>
+
+    <script src="app/index.module.js"></script>
+    <script src="app/index.config.js"></script>
+    <script src="app/components/apiRestangular.factory.js"></script>
+    <script src="app/components/file.directive.js"></script>
+    <script src="app/components/elemFocus.factory.js"></script>
+
+    <script src="app/main/main.controller.js"></script>
+    <script src="app/dashboard/dropdown_menu.controller.js"></script>
+    <script src="app/session/session.service.js"></script>
+    <script src="app/session/terms_modal.controller.js"></script>
+    <script src="app/session/session.controller.js"></script>
+    <script src="app/session/activate.controller.js"></script>
+    <script src="app/dashboard/dashboard.controller.js"></script>
+    <script src="app/account/account.service.js"></script>
+    <script src="app/account/invoice.service.js"></script>
+    <script src="app/account/billing.controller.js"></script>
+    <script src="app/account/mine.controller.js"></script>
+    <script src="app/account/profile.controller.js"></script>
+    <script src="app/account/deactive.controller.js"></script>
+    <script src="app/account/billing_history.controller.js"></script>
+    <script src="app/account/invoice_modal.controller.js"></script>
+    <script src="app/orbits/orbit.service.js"></script>
+    <script src="app/orbits/create.controller.js"></script>
+    <script src="app/orbits/mine.controller.js"></script>
+    <script src="app/orbits/ssh.controller.js"></script>
+    <script src="app/orbits/orbit_detail_modal.controller.js"></script>
+    <script src="app/orbits/ssh_edit_modal.controller.js"></script>
+    <script src="app/support/tech.controller.js"></script>
+    <script src="app/support/contact.controller.js"></script>
+
+    <script src="app/index.route.js"></script>
+    <script src="app/index.run.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<div class="container-fluid dark-background">
+
+  <div class="row dashboard-header">
+    
+    <div ng-include src="'app/dashboard/dropdown_menu.html'"></div>
+
+    <!-- Start of top menu -->
+    <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 text-center">
+      <h1 class="white-color">Greetings <span ng-if="vm.me.profile != null">{{vm.me.profile.firstname}}</span>,<br/>Welcome To The Grid.</h1>
+      <p class="form-text-white">
+        Before getting started, finish setting up your account by entering your billing information.
+      </p>
+    </div>
+    <!-- End of top menu -->
+  </div>
+
+  <div ng-include src="'app/dashboard/top.html'"></div>
+
+  <div class="row dashboard-main">
+
+    <div class="message-bar dashboard-message" ng-include src="'app/dashboard/message_bar.html'"></div>
+
+    <div class="container">
+      <div class="col-md-12">
+        <div class="content-block">
+
+          <div class="left-section" ng-include src="'app/account/left_menu.html'"></div>
+
+          <!-- Start of Billing form -->
+          <div class="right-section myaccount-section">
+            <h4 class="title">My Account</h4>
+            <p class="form-text">
+              Update your basic account details.
+            </p>
+            <h4 class="form-title">Update Email Preferences</h4>
+            <form class="form-horizontal" role="form" name="myAccountForm" ng-submit="vm.saveEmail()">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="email" class="form-control" placeholder="Email" ng-required="true" ng-model="vm.profileEmail.email" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="email" class="form-control" placeholder="Your Email Again" ng-required="true" ng-model="vm.profileEmail.emailConfirm" ng-class="{invalid: !vm.correctEmail}" ng-keyup="vm.checkEmail();" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb50">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-lg btn-success">Save Changes</button>
+                  <a class="action-cancel" ng-click="vm.cancelEmail()">Cancel</a>
+                </div>
+              </div>
+            </form>
+
+            <p class="form-title FormFocusText">
+              Email Subscription Preferences
+            </p>
+            <form class="form-horizontal subscription-form" role="form" name="subscriptionForm" ng-submit="vm.saveSubscription()">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <label class="checkbox-inline Text-Style">
+                      <input type="checkbox" class="form-control" ng-model="vm.emailSubscription" />
+                      Keep me updated with announcements, service updates and grid talk.
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-10">
+                    <label class="checkbox-inline Text-Style">
+                      <input type="checkbox" class="form-control" ng-model="vm.exampleText" />
+                      Example Text
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <h4 class="form-title">Change Your Password</h4>
+            <form class="form-horizontal" role="form" name="passwordForm" ng-submit="vm.savePassword()">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="password" class="form-control" placeholder="Old Password" ng-required="true" ng-model="vm.profilePassword.current_password" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="password" class="form-control" placeholder="Your New Password" ng-required="true" ng-model="vm.profilePassword.new_password" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="password" class="form-control" placeholder="Verify Password" ng-required="true" ng-model="vm.profilePassword.re_new_password"  ng-class="{invalid: !vm.correctPassword}" ng-keyup="vm.checkPassword();" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb50">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-lg btn-success">Update Password</button>
+                  <a class="action-cancel" ng-click="vm.cancelPassword()">Cancel</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div ng-include src="'app/main/footer.html'"></div>

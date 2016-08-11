@@ -1,0 +1,27 @@
+<div class="well">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>Reset Your Password</h1>
+      <h4>Enter your email below and we will send <br/> a reset link to your email address.</h4>
+    </div>
+  </div>
+
+  <div class="row session-form mt40">
+    <div class="col-xs-6 col-xs-offset-3">
+      <form role="form" ng-submit="vm.resetRequest();">
+        <fieldset>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" ng-required="true" ng-model="vm.user.email" />
+          </div>
+        </fieldset>
+        <div class="form-actions text-center">
+          <button type="submit" class="btn btn-success btn-lg btn-block">Send Email</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="reset-login">
+    <a ui-sref="auth.signin">Log In</a>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{orbitCtrl.orbit.vm_name}} Details</h4>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table table-striped mb50">
+          <thead>
+            <tr>
+              <th>Orbit Name</th>
+              <th>IP Address</th>
+              <th>VCPUS</th>
+              <th>RAM</th>
+              <th>Volume</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{orbitCtrl.orbit.vm_name}}</td>
+              <td>{{orbitCtrl.orbit.ipaddr}}</td>
+              <td>{{orbitCtrl.orbit.vcpus}}</td>
+              <td>{{orbitCtrl.orbit.ram}}GB</td>
+              <td>{{orbitCtrl.orbit.volume}}GB</td>
+              <td>{{orbitCtrl.orbit.active == true ? 'Active' : 'Deactive'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+    <a class="modal-cancel" ng-click="orbitCtrl.ok()">Close</a>
+</div>

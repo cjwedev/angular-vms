@@ -1,0 +1,158 @@
+<div class="container-fluid dark-background">
+
+  <div class="row dashboard-header">
+    
+    <div ng-include src="'app/dashboard/dropdown_menu.html'"></div>
+
+    <!-- Start of top menu -->
+    <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12 text-center">
+      <h1 class="white-color">Greetings <span ng-if="vm.me.profile != null">{{vm.me.profile.firstname}}</span>,<br/>Welcome To The Grid.</h1>
+      <p class="form-text-white">
+        Before getting started, finish setting up your account by entering your billing information.
+      </p>
+    </div>
+    <!-- End of top menu -->
+  </div>
+
+  <div ng-include src="'app/dashboard/top.html'"></div>
+
+  <div class="row dashboard-main">
+
+    <div class="message-bar dashboard-message" ng-include src="'app/dashboard/message_bar.html'"></div>
+
+    <div class="container">
+      <div class="col-md-12">
+        <div class="content-block">
+
+          <div class="left-section" ng-include src="'app/account/left_menu.html'"></div>
+
+          <!-- Start of Billing form -->
+          <div class="right-section">
+            <h4 class="title">Billing</h4>
+            <p class="form-text">
+              Enter a payment method below to finish setting up your System On Grid account. Here you can update your payment information at anytime.
+            </p>
+            <h4 class="form-title">Credit Card Information</h4>
+            <form class="form-horizontal" role="form" name="billingInfoForm" stripe-form="addBillingInfo">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Name" ng-model="name" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Billing Address" ng-model="addressLine1" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Address Continued" ng-model="addressLine2" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="City" ng-model="addressCity" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="State" ng-model="addressState" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="ZIP" ng-model="addressZip" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Country" ng-model="addressCountry" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Company" ng-model="company" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Card Number" ng-required="true" ng-model="number" payments-format="card" payments-validate="card" name="number" />
+                    <div ng-if="billingInfoForm.$submitted && billingInfoForm.number.$invalid">
+                      Error: Invalid Card Number
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="CVC" ng-required="true" ng-model="cvc" payments-format="cvc" payments-validate="cvc" name="cvc"/>
+                    <div ng-if="billingInfoForm.$submitted && billingInfoForm.cvc.$invalid">
+                      Error: Invalid CVC Number
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group col-sm-12">
+                    <select class="form-control" placeholder="Expires Month"  ng-required="true" ng-model="expMonth" ng-options="currMonth for currMonth in vm.months"></select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group col-sm-12">
+                    <select class="form-control" placeholder="Expires Year" ng-required="true" ng-model="expYear" ng-options="year for year in vm.years"></select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <input type="text" class="form-control" placeholder="Nickname" ng-model="vm.account.nickname" />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group col-sm-12">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" class="form-control" ng-model="vm.account.is_default" /> Set Default
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb50">
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn-lg btn-success">Update</button>
+                  <a href="#" class="action-cancel">Cancel</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- End of Billing form -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-include src="'app/main/footer.html'"></div>

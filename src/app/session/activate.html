@@ -1,0 +1,16 @@
+<div class="well">
+  <img src="assets/images/MacottSuccess.png" class="img-session-confirm" />
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div ng-if="!vm.activated">
+        <h1>Bad News!</h1>
+        <h4>You have some issue on your accout activation.</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt40">
+    <a ui-sref="auth.signin" class="btn btn-success btn-lg">Sign In</a>
+  </div>
+</div>

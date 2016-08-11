@@ -1,0 +1,49 @@
+<!-- Start top navbar section -->
+<nav class="navbar navbar-static-top navbar-default s-navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="home">
+        <div class="hidden-xs">
+          <img src="assets/images/logo-vert@2x.png" class="img-responsive" />
+        </div>
+        <div class="visible-xs">
+          <img src="assets/images/horizontal-logo-white.svg" />
+        </div>
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <!-- top navbar in desktop view -->
+      <div class="hidden-xs">
+        <ul class="nav navbar-nav">
+          <li><a ui-sref="features">Features</a></li>
+          <li><a ui-sref="document">Documentation</a></li>
+          <li><a ui-sref="pricing">Pricing</a></li>
+          <li><a ui-sref="support">Support</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right navbar-login">
+          <li class="item-login"><a ui-sref="auth.signin">Login</a></li>
+          <li class="item-signup"><a ui-sref="auth.signup">Get Started Free</a></li>
+        </ul>
+      </div>
+      <!-- top navbar in mobile view -->
+      <div class="visible-xs">
+        <ul class="nav navbar-nav">
+          <li class="item-login-xs"><a ui-sref="auth.signin" class="btn btn-lg btn-success">Sign Up / Login</a></li>
+          <li><a ui-sref="features">Features</a></li>
+          <li><a ui-sref="document">Documentation</a></li>
+          <li><a ui-sref="pricing">Pricing</a></li>
+          <li><a ui-sref="support">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End top navbar section -->

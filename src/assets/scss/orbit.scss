@@ -1,0 +1,133 @@
+@import "mixins";
+@import "variables";
+@import "fonts";
+
+.orbit-os {
+  display: inline-block;
+  float: left;
+  margin-right: 30px;
+  width: 75px;
+  height: 150px;
+
+  .os-image {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    border-radius: 3px;
+    border: solid 2px $c-pale-grey-two;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $c-greenish-teal;
+    }
+
+    &.selected {
+      background-color: $c-greenish-teal;
+    }
+
+    img {
+      width: 40px;
+      margin-top: 15px;
+      mix-blend-mode: difference;
+    }
+  }
+
+  .os-label {
+    @extend .FormFocusText;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}
+
+.orbits-table {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  };
+
+  th {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    border-bottom: 0 !important;
+  }
+
+  tbody > tr:hover {
+    background-color: $c-white;
+    cursor: pointer;
+  }
+
+  td {
+    padding-top: 17px !important;
+    padding-bottom: 17px !important;
+    border-top: 0 !important;
+  }
+
+  .no-padding {
+    padding: 0px !important;
+  }
+}
+
+.orbit-detail {
+  padding: 50px 70px 100px 70px !important;
+  background-color: $c-dark-two;
+  position: relative;
+  text-align: center;
+
+  .orbit-action {
+    font-family: $font-muli-semi-bold;
+    @inlucde font-size(16);
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    color: $c-slate;
+
+    &:hover {
+      @extend .Navigation-Text-Light;
+    }
+
+    .action-image {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .detail-view {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+  }
+
+  .delete {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+  }
+}
+
+.orbit-detail-show {
+  opacity: 1;
+  height: 100%;
+
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    @include transition(all linear 0.5s);
+  }
+
+  &.ng-hide {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+tr.orbit-overview:hover {
+  td {
+    border-top: 1px solid $c-pale-grey-two;
+    border-bottom: 1px solid $c-pale-grey-two;
+  }
+}

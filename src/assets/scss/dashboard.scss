@@ -1,0 +1,175 @@
+@import "mixins";
+@import "variables";
+@import "fonts";
+
+.form-text {
+  @extend .FormFocusText;
+}
+
+.form-text-white {
+  @extend .FormForcusTextAlt;
+}
+
+.dashboard-header {
+  padding-top: 55px;
+  padding-bottom: 150px;
+
+  @include tablet {
+    padding-bottom: 75px;
+  };
+
+  background-color: $c-azul;
+  @include background-image('star-field-alpha');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  .logo {
+    margin-left: 75px;
+  }
+}
+
+.dashboard-nav {
+  background-color: $c-dark-two;
+  padding: 30px 0px;
+
+  a {
+    @extend .SimpleLinkLight;
+
+    &.active,
+    &:hover,
+    &:active,
+    &:focus {
+      img {
+        mix-blend-mode: lighten;
+      }
+    }
+
+    img {
+      object-fit: contain;
+      mix-blend-mode: luminosity;
+      margin-right: 15px;
+      margin-top: -5px;
+    }
+  }
+}
+
+.dashboard-main {
+  padding: 100px 0px;
+  background-color: $c-dark;
+  position: relative;
+
+  .block-tag {
+    @extend .MiniHeadingText;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+
+  .quick-launch {
+    border-radius: 3px;
+    background-color: $c-pale-grey;
+
+    .glance {
+      text-align: center;
+      padding: 60px 40px;
+      height: 460px;
+      background-color: $c-azul-two;
+      position: relative;
+    }
+
+    .block-action {
+      position: absolute;
+      bottom: 60px;
+      transform: translatex(-50%);
+    }
+
+    .starting {
+      background: $c-white;
+      text-align: center;
+      position: relative;
+      padding: 60px 40px;
+      height: 460px;
+    }
+
+    .progress-section {
+      margin-top: 80px;
+
+      .progress-name {
+        @extend .FormForcusTextAlt;
+        text-align: left;
+      }
+
+      .progress {
+        padding-left: 0;
+        padding-right: 0px;
+        height: 24px;
+        border-radius: 100px;
+        background-color: $c-azul;
+        box-shadow: none;
+      }
+
+      .progress-bar {
+        border-radius: 100px;
+        background-color: $c-greenish-teal;
+      }
+    }
+  }
+}
+
+.content-block {
+  border-radius: 3px;
+  background-color: $c-pale-grey;
+  padding: 60px 40px 20px 40px;
+  margin-bottom: 20px;
+  min-height: 315px;
+  position: relative;
+
+  .block-action {
+    position: absolute;
+    bottom: 20px;
+    transform: translatex(-50%);
+  }
+
+  .left-section {
+    float: left;
+    width: 300px;
+
+    ul.left-menu {
+      list-style-type: none;
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .right-section {
+    float: left;
+    width: calc(100% - 300px);
+    margin-bottom: 100px;
+
+    .title {
+      margin-top: 0px;
+    }
+
+    .form-title {
+      margin-top: 100px;
+      margin-bottom: 30px;
+
+      @include tablet {
+        margin-top: 50px;
+      };
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+    }
+
+    .action-cancel {
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}
